@@ -141,10 +141,14 @@ git clone https://github.com/binary-husky/chatgpt_academic.git
 cd chatgpt_academic
 # 配置 海外Proxy 和 OpenAI API KEY
 config.py
+# 网页的端口, -1代表随机端口
+WEB_PORT = -1 #建议修改为你喜欢的端口
 # 安装
-docker build -t gpt-academic .
+    docker build -t gpt-academic . #建议docker-compose安装
+
 # 运行
 docker run --rm -it --net=host gpt-academic
+或docker-compose up -d
 
 # 测试实验性功能
 ## 测试自我代码解读
